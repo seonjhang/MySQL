@@ -4,6 +4,6 @@ This folder contains key MySQL concepts explained with examples and real-world a
 
 ## 📄 Files
 
-- [`select-without-from.md`](concepts/select-without-from.md): Why a SELECT query can work without a FROM clause 
+- [`select-without-from.md`](select-without-from.md): Why a SELECT query can work without a FROM clause 
 
 More to be added soon...
