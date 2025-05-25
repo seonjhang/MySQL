@@ -1,6 +1,6 @@
-# SELECT 문에서 FROM 절이 없는 경우
+# SELECT Without FROM Clause in SQL
 
-## 🧠 질문
+## 🧠 Question
 
 ```sql
 SELECT 
@@ -12,36 +12,37 @@ SELECT
     NULL) AS SecondHighestSalary;
 ```
 
-**Q.** 이 구문에서 서브쿼리를 사용하는데, 왜 가장 바깥 SELECT에는 `FROM` 절이 없어도 되는 걸까?
+**Q.** This query uses a subquery, but why does the outer SELECT statement not require a `FROM` clause?
 
 ---
 
-## ✅ 답변 요약
+## ✅ Summary Answer
 
-- 바깥 SELECT는 **단일 값(스칼라 값)** 을 반환하는 **서브쿼리**를 호출하고 있을 뿐입니다.
-- SQL에서는 **테이블이나 행 집합을 조회하지 않는 경우**, `FROM` 없이 `SELECT`문을 작성할 수 있습니다.
+- The outer `SELECT` simply returns a **scalar value** (a single value) from the subquery.
+- In SQL, if you are **not querying a table or a set of rows**, a `FROM` clause is not needed.
 
 ---
 
-## 📌 예시
+## 📌 Examples
 
 ```sql
--- FROM 절 없는 SELECT (정상 작동)
+-- SELECT without FROM (valid)
 SELECT 1 + 2;
 
--- FROM 절 없이 서브쿼리 값만 출력 (정상 작동)
+-- SELECT with a scalar subquery (valid)
 SELECT (SELECT COUNT(*) FROM Employee);
 ```
 
 ---
 
-## 🔍 관련 개념
+## 🔍 Related Concepts
 
-- **서브쿼리 (Subquery)**: 다른 쿼리 안에 포함된 쿼리.
-- **스칼라 값 (Scalar Value)**: 단일 값. 테이블이 아닌 하나의 결과값.
-- **IFNULL()**: NULL일 경우 대체값을 반환.
+- **Subquery**: A query nested inside another query.
+- **Scalar Value**: A single value, not a table or row set.
+- **IFNULL()**: Returns the first argument if it is not NULL, otherwise returns the second.
 
 ---
 
-## 💡 정리
-> 바깥 SELECT문은 단순히 하나의 **스칼라 값**을 출력하려는 목적이기 때문에, `FROM` 절이 없어도 **문법적으로 유효**합니다.
+## 💡 Conclusion
+
+> When a `SELECT` statement is only used to return a **scalar value**, it does not need a `FROM` clause. This is perfectly valid SQL syntax.
