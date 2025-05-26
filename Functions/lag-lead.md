@@ -97,3 +97,29 @@ WHERE temperature > prev_temp;
 
 - Available in MySQL 8.0 and above.
 - Cannot be used in earlier versions—use JOINs as an alternative.
+
+---
+
+## ❓ FAQ: Can I use `LAG()` without `OVER()`?
+
+**No, you cannot.**
+
+The `LAG()` function is a window function and **must always be used with an `OVER()` clause**. Without it, SQL has no way to determine the "previous row".
+
+### 🔍 Examples
+
+```sql
+-- ❌ Invalid: This will raise a syntax error
+SELECT LAG(temperature) FROM Weather;
+
+-- ✅ Valid: Defines window and row order
+SELECT LAG(temperature) OVER (ORDER BY recordDate) FROM Weather;
+```
+
+### 🧠 Why is `OVER()` required?
+
+- It defines the **window frame** of rows
+- It establishes how to order those rows to know which one comes “before” or “after”
+
+You may see some window functions like `COUNT(*) OVER ()` without `ORDER BY`, but for `LAG()` and `LEAD()` this is **not optional**.
+
