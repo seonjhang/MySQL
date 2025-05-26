@@ -8,6 +8,8 @@ This folder contains documentation and examples of commonly used MySQL functions
 
 - [`length.md`](length.md): Explains how the `LENGTH()` function works, with examples and a LeetCode use case (1683 - Invalid Tweets)
 - [`lag-lead.md`](lag-lead.md): Explains the Window Functions of `Lag()` and `LEAD()`, with examples and a LeetCode use case (197 - Rising Temperature)
+- [`date-functions.md`](date-functions.md)
+
 
 ## 🧠 Goal
 
