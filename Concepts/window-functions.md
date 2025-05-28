@@ -75,3 +75,41 @@ Great for:
 - Comparisons
 - Running totals
 - Trend analysis
+
+---
+
+## 🧭 Where Can You Use a Window Function?
+
+| SQL Clause      | Usage     | Notes |
+|------------------|-----------|-------|
+| `SELECT`         | ✅ Yes    | Most common usage — shows results in columns |
+| `ORDER BY`       | ✅ Yes    | Can sort results using window function |
+| `HAVING`         | ✅ Yes    | Can filter based on windowed results |
+| `WHERE`          | ❌ No     | Cannot use — runs before window functions are computed |
+| `GROUP BY`       | ❌ No     | Window functions are applied after grouping |
+| `JOIN ON`        | ❌ No     | Join conditions must not use window functions |
+
+---
+
+### ❌ Why Not in `WHERE`?
+
+```sql
+-- Invalid
+SELECT *
+FROM Employees
+WHERE RANK() OVER (ORDER BY salary DESC) <= 3;
+```
+
+Window functions cannot be used in `WHERE` because they are evaluated **after** rows are filtered.  
+To use a window function in filtering, wrap it in a subquery:
+
+```sql
+SELECT *
+FROM (
+  SELECT *, RANK() OVER (ORDER BY salary DESC) AS rank
+  FROM Employees
+) AS ranked
+WHERE rank <= 3;
+```
+
+> 💡 Tip: Use subqueries or CTEs to filter rows using window function results.
