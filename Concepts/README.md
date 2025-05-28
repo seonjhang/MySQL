@@ -4,6 +4,7 @@ This folder contains key MySQL concepts explained with examples and real-world a
 
 ## 📄 Files
 
+- [`logical-query-processing.md`](logical-query-processing.md): Explains the logical order of how SQL is proceessed
 - [`joins.md`](joins.md): Overview of INNER, LEFT, RIGHT, FULL, and CROSS JOIN types, including usage examples and a summary table
 - [`select-without-from.md`](select-without-from.md): Why a SELECT query can work without a FROM clause
 - [`window-functions.md`](window-functions.md)
