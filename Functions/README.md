@@ -11,7 +11,7 @@ This folder contains documentation and examples of commonly used MySQL functions
 - [`if-vs-case.md`](if-vs-case.md): Compares `IF()` and `CASE`, showing when they are interchangeable and when one is preferred.
 - [`length.md`](length.md): Explains how the `LENGTH()` function works, with examples and a LeetCode use case (1683 - Invalid Tweets)
 - [`lag-lead.md`](lag-lead.md): Explains the Window Functions of `Lag()` and `LEAD()`, with examples and a LeetCode use case (197 - Rising Temperature)
-- [`date-functions.md`](date-functions.md)
+- [`date-functions.md`](date-functions.md): Explains basic date functions
 
 
 ## 🧠 Goal
