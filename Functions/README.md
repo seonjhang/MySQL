@@ -12,6 +12,9 @@ This folder contains documentation and examples of commonly used MySQL functions
 - [`length.md`](length.md): Explains how the `LENGTH()` function works, with examples and a LeetCode use case (1683 - Invalid Tweets)
 - [`lag-lead.md`](lag-lead.md): Explains the Window Functions of `Lag()` and `LEAD()`, with examples and a LeetCode use case (197 - Rising Temperature)
 - [`date-functions.md`](date-functions.md): Explains basic date functions
+- [`lpad.md`](lpad.md): Describes the `LPAD()` function for padding strings to the left.
+- [`concat.md`](concat.md): Describes the `CONCAT()` function for combining strings.
+
 
 
 ## 🧠 Goal
