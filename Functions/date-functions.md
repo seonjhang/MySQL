@@ -85,6 +85,59 @@ SELECT DATE_FORMAT(NOW(), '%Y-%m-%d %H:%i');  -- '2024-05-25 15:45'
 
 ---
 
+## 🧮 7. EXTRACT(YEAR_MONTH FROM date)
+Extracts parts of a date such as year, month, day, etc.
+
+```sql
+SELECT EXTRACT(YEAR_MONTH FROM '2024-06-09');  -- 202406
+SELECT EXTRACT(YEAR FROM '2024-06-09');        -- 2024
+SELECT EXTRACT(MONTH FROM '2024-06-09');       -- 6
+```
+
+Use case: Grouping or filtering by year, month, etc.
+---
+
+## 🧱 8. LPAD(str, length, pad_str)
+Pads the left side of a string with another string until a certain length is reached.
+
+```sql
+SELECT LPAD('6', 2, '0');  -- '06'
+SELECT LPAD(MONTH(NOW()), 2, '0');  -- Pads month numbers to always have two digits
+```
+
+Use case: Formatting months or days as `01`, `02`, etc., for consistent date strings.
+
+
+✅ Example Use: Formatting Date as `YYYY-MM`
+
+```sql
+SELECT CONCAT(YEAR(trans_date), '-', LPAD(MONTH(trans_date), 2, '0')) AS month
+FROM Transactions;
+```
+
+Alternative with `DATE_FORMAT`:
+
+```sql
+SELECT DATE_FORMAT(trans_date, '%Y-%m') AS month
+FROM Transactions;
+```
+
+---
+
+## 📆 9. YEAR(date) / MONTH(date)
+Extracts the year or month from a given date.
+
+```sql
+SELECT YEAR('2024-06-09');   -- 2024
+SELECT MONTH('2024-06-09');  -- 6
+```
+
+✅ Use Cases:
+- Used in reporting or grouping queries (e.g., by year/month)
+- Often combined with `GROUP BY`, `ORDER BY`, or string formatting
+
+---
+
 ## 💡 Summary Table
 
 | Function          | Purpose                      | Notes                             |
