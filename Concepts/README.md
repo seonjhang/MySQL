@@ -11,6 +11,8 @@ This folder contains key MySQL concepts explained with examples and real-world a
 - [`like.md`](like.md): Explains how to use the `LIKE` operator for pattern matching in SQL, with wildcards and examples.
 - [`regexp.md`](regexp.md): Covers advanced pattern matching using MySQL's `REGEXP` (or `RLIKE`), including syntax, examples, and comparison to `LIKE`.
 - [`left-join-filtering.md`](left-join-filtering.md): Explains the difference between placing conditions in `ON` vs `WHERE` clauses when using `LEFT JOIN`.
+- [`distinct-select-error.md`](distinct-select-error.md): Clarifies the correct placement and usage of `DISTINCT` in a `SELECT` clause.
+
 
 
 More to be added soon...
