@@ -12,5 +12,7 @@ This folder contains key MySQL concepts explained with examples and real-world a
 - [`regexp.md`](regexp.md): Covers advanced pattern matching using MySQL's `REGEXP` (or `RLIKE`), including syntax, examples, and comparison to `LIKE`.
 - [`left-join-filtering.md`](left-join-filtering.md): Explains the difference between placing conditions in `ON` vs `WHERE` clauses when using `LEFT JOIN`.
 - [`distinct.md`](distinct.md): Clarifies the correct placement and usage of `DISTINCT` in a `SELECT` clause.
+- [`aggregate-function-null.md`](aggregate-function-null.md): Explains how aggregate functions like `MAX()` behave on empty sets and why they return a row with `NULL`.
+
 
 More to be added soon...
