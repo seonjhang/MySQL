@@ -13,6 +13,8 @@ This folder contains key MySQL concepts explained with examples and real-world a
 - [`left-join-filtering.md`](left-join-filtering.md): Explains the difference between placing conditions in `ON` vs `WHERE` clauses when using `LEFT JOIN`.
 - [`distinct.md`](distinct.md): Clarifies the correct placement and usage of `DISTINCT` in a `SELECT` clause.
 - [`aggregate-function-null.md`](aggregate-function-null.md): Explains how aggregate functions like `MAX()` behave on empty sets and why they return a row with `NULL`.
+- [`non-equi-join.md`](non-equi-join.md): Explains how to use JOINs with non-equality conditions like `>=`, known as non-equi joins.
+
 
 
 More to be added soon...
